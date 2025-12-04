@@ -1,0 +1,127 @@
+/* Login.css */
+:root {
+  --dev-bg: #0f172a;       /* Slate 950 */
+  --dev-card: #1e293b;     /* Slate 800 */
+  --dev-border: #334155;   /* Slate 700 */
+  --dev-primary: #3b82f6;  /* Blue 500 */
+  --dev-text: #f8fafc;     /* Slate 50 */
+  --dev-muted: #94a3b8;    /* Slate 400 */
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+}
+
+.dev-login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dev-bg);
+  background-image: radial-gradient(circle at top right, #1e293b 0%, transparent 45%);
+  color: var(--dev-text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.dev-card {
+  width: 100%;
+  max-width: 400px;
+  background: var(--dev-card);
+  padding: 2.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--dev-border);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.dev-header { text-align: center; margin-bottom: 2rem; }
+.dev-logo {
+  font-family: var(--font-mono);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--dev-primary);
+  letter-spacing: -1px;
+}
+.dev-logo span { color: var(--dev-text); }
+.dev-subtitle { color: var(--dev-muted); font-size: 0.875rem; margin-top: 0.5rem; }
+
+.form-group { margin-bottom: 1.25rem; }
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--dev-muted);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.input-wrapper { position: relative; }
+
+.dev-input {
+  width: 100%;
+  background: var(--dev-bg);
+  border: 1px solid var(--dev-border);
+  color: var(--dev-text);
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+
+.dev-input:focus {
+  outline: none;
+  border-color: var(--dev-primary);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.toggle-pwd {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--dev-muted);
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--dev-primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: opacity 0.2s;
+}
+
+.btn-primary:disabled { opacity: 0.7; cursor: not-allowed; }
+
+.divider {
+  display: flex;
+  align-items: center;
+  color: var(--dev-muted);
+  margin: 1.5rem 0;
+  font-size: 0.8rem;
+}
+.divider::before, .divider::after {
+  content: ''; flex: 1; border-bottom: 1px solid var(--dev-border);
+}
+.divider span { padding: 0 10px; }
+
+.btn-github {
+  width: 100%;
+  background: #24292f;
+  color: white;
+  border: 1px solid var(--dev-border);
+  padding: 0.75rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  font-weight: 500;
+}
+.btn-github:hover { background: #1a1f24; }
